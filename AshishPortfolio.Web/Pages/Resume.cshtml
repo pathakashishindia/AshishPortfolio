@@ -1,0 +1,248 @@
+﻿@page
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ashish Kumar Pathak - Visual Infographic Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <style>
+        body {
+            background-color: #070A12;
+            color: #F1F5F9;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .glass-panel {
+            background: rgba(18, 24, 38, 0.85);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.6);
+        }
+
+        @@media print {
+            .no-print {
+                display: none !important;
+            }
+
+            body {
+                background: #070A12 !important;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .print-container {
+                padding: 0 !important;
+                max-width: 100% !important;
+                border: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="py-8 px-4 selection:bg-slate-700 selection:text-white">
+
+    <!-- Top Action Bar -->
+    <div class="max-w-5xl mx-auto mb-6 flex justify-between items-center no-print">
+        <a href="/" class="inline-flex items-center gap-2 text-xs font-bold text-slate-400 hover:text-white transition">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Portfolio
+        </a>
+
+        <!-- Direct PDF Download Link to /Ashish_Resume.pdf -->
+        <a href="/Ashish_Resume.pdf" download="Ashish_Kumar_Pathak_Resume.pdf" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white text-xs font-bold flex items-center gap-2 shadow-md transition">
+            <i data-lucide="download" class="w-4 h-4"></i> Download Official PDF
+        </a>
+    </div>
+
+    <!-- MAIN INFOGRAPHIC RESUME CONTAINER -->
+    <div class="max-w-5xl mx-auto glass-panel p-8 sm:p-12 rounded-3xl space-y-10 print-container border border-slate-800">
+
+        <!-- 1. HEADER -->
+        <div class="text-center space-y-2 border-b border-slate-800 pb-8">
+            <h1 class="text-3xl sm:text-4xl font-extrabold uppercase tracking-tight text-white font-mono">
+                Ashish Kumar Pathak
+            </h1>
+            <p class="text-xs sm:text-sm font-bold text-slate-400 tracking-wider uppercase font-mono">
+                Full-Stack .NET Developer | C#, ASP.NET Core, Angular, SQL Server, Azure
+            </p>
+            <p class="text-xs text-slate-500 font-mono">Greater Noida, India • 4+ Years Experience • Open for Global Remote</p>
+        </div>
+
+        <!-- 2. CENTRAL INFOGRAPHIC GRID -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+            <!-- Left Side: Experience & Milestones -->
+            <div class="lg:col-span-4 space-y-6">
+                <div class="flex items-center gap-2 border-b border-slate-800 pb-2">
+                    <i data-lucide="briefcase" class="w-4 h-4 text-slate-400"></i>
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-slate-300 font-mono">Experience &amp; Milestones</h2>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="p-4 rounded-2xl bg-white/[0.03] border border-slate-800 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px] font-bold">2023 – Present</span>
+                            <span class="text-[10px] text-slate-500 font-mono">Wipro Ltd</span>
+                        </div>
+                        <h3 class="text-xs font-bold text-white">Full-Stack .NET Developer (CHS Inc.)</h3>
+                        <p class="text-[11px] text-slate-400 leading-relaxed">
+                            Built PlanetPress JDE middleware cutting document processing from 30–40 mins to seconds. Shipped daily reporting portals.
+                        </p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-white/[0.03] border border-slate-800 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px] font-bold">JAN 2023</span>
+                            <span class="text-[10px] text-slate-500 font-mono">Tapestry Inc</span>
+                        </div>
+                        <h3 class="text-xs font-bold text-white">Full-Stack Developer (Junior)</h3>
+                        <p class="text-[11px] text-slate-400 leading-relaxed">
+                            Maintained .NET Core checkout modules, payment gateways, and authored tuned SQL procedures resolving deadlocks.
+                        </p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-white/[0.03] border border-slate-800 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px] font-bold">JUL 2022</span>
+                            <span class="text-[10px] text-slate-500 font-mono">Coach Inc</span>
+                        </div>
+                        <h3 class="text-xs font-bold text-white">Database &amp; .NET Support Trainee</h3>
+                        <p class="text-[11px] text-slate-400 leading-relaxed">
+                            24/7 SQL Server production operations, monitored Tidal ETL batch jobs, and implemented code-level incident fixes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Center Hub: Suit Cutout Frame (`/ashish.png`) -->
+            <div class="lg:col-span-4 flex flex-col items-center justify-center space-y-6 text-center">
+                <div class="relative w-52 h-52 sm:w-60 sm:h-60 rounded-full p-2 bg-gradient-to-b from-slate-500 via-slate-800 to-transparent shadow-2xl flex items-center justify-center">
+                    <div class="w-full h-full rounded-full overflow-hidden border-2 border-slate-700 bg-slate-900 flex items-center justify-center">
+                        <img src="/ashish.png" alt="Ashish Kumar Pathak" class="w-full h-full object-contain object-top" onerror="this.src='/portrait.png'" />
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-white/[0.02] border border-slate-800 text-xs text-slate-400 leading-relaxed italic">
+                    "Specializing in end-to-end enterprise software engineering, distributed systems resilience, and transforming operational bottlenecks into automated seconds."
+                </div>
+
+                <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center gap-3 text-xs font-mono text-slate-300">
+                    <i data-lucide="cpu" class="w-5 h-5 text-slate-400"></i>
+                    <span>Full-Stack Architecture Hub</span>
+                </div>
+            </div>
+
+            <!-- Right Side: Interactive Working Contact Details & Skills -->
+            <div class="lg:col-span-4 space-y-6">
+
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2 border-b border-slate-800 pb-2">
+                        <i data-lucide="send" class="w-4 h-4 text-slate-400"></i>
+                        <h2 class="text-xs font-bold uppercase tracking-widest text-slate-300 font-mono">Contact Details</h2>
+                    </div>
+
+                    <div class="space-y-2 text-xs font-mono">
+                        <div class="p-2.5 rounded-xl bg-white/[0.03] border border-slate-800 flex items-center gap-2.5 text-slate-400">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-slate-400 shrink-0"></i>
+                            <span class="truncate">Greater Noida, India</span>
+                        </div>
+
+                        <a href="tel:+916204166367" class="p-2.5 rounded-xl bg-white/[0.03] border border-slate-800 hover:border-slate-600 hover:text-white transition flex items-center gap-2.5 text-slate-300 group">
+                            <i data-lucide="phone" class="w-4 h-4 text-slate-400 group-hover:text-white shrink-0"></i>
+                            <span class="truncate">+91 62041 66367</span>
+                        </a>
+
+                        <a href="mailto:pathak.ashishindia@gmail.com" class="p-2.5 rounded-xl bg-white/[0.03] border border-slate-800 hover:border-amber-500 hover:text-amber-400 transition flex items-center gap-2.5 text-slate-300 group">
+                            <i data-lucide="mail" class="w-4 h-4 text-amber-500 shrink-0"></i>
+                            <span class="truncate">pathak.ashishindia@gmail.com</span>
+                        </a>
+
+                        <a href="https://linkedin.com/in/ashish-pathak-6b1567219" target="_blank" class="p-2.5 rounded-xl bg-white/[0.03] border border-slate-800 hover:border-blue-500 hover:text-blue-400 transition flex items-center gap-2.5 text-slate-300 group">
+                            <i data-lucide="linkedin" class="w-4 h-4 text-blue-500 shrink-0"></i>
+                            <span class="truncate">linkedin.com/in/ashish-pathak</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2 border-b border-slate-800 pb-2">
+                        <i data-lucide="code-2" class="w-4 h-4 text-slate-400"></i>
+                        <h2 class="text-xs font-bold uppercase tracking-widest text-slate-300 font-mono">Software Arsenal</h2>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-2 text-center font-mono">
+                        <div class="p-3 rounded-2xl bg-white/[0.03] border border-slate-800">
+                            <span class="text-base font-extrabold text-white block">C#</span>
+                            <span class="text-[9px] text-slate-500 uppercase">.NET Core</span>
+                        </div>
+                        <div class="p-3 rounded-2xl bg-white/[0.03] border border-slate-800">
+                            <span class="text-base font-extrabold text-white block">SQL</span>
+                            <span class="text-[9px] text-slate-500 uppercase">T-SQL</span>
+                        </div>
+                        <div class="p-3 rounded-2xl bg-white/[0.03] border border-slate-800">
+                            <span class="text-base font-extrabold text-white block">NG</span>
+                            <span class="text-[9px] text-slate-500 uppercase">Angular</span>
+                        </div>
+                        <div class="p-3 rounded-2xl bg-white/[0.03] border border-slate-800">
+                            <span class="text-base font-extrabold text-white block">AZ</span>
+                            <span class="text-[9px] text-slate-500 uppercase">DevOps</span>
+                        </div>
+                        <div class="p-3 rounded-2xl bg-white/[0.03] border border-slate-800">
+                            <span class="text-base font-extrabold text-white block">EF</span>
+                            <span class="text-[9px] text-slate-500 uppercase">EF Core</span>
+                        </div>
+                        <div class="p-3 rounded-2xl bg-white/[0.03] border border-slate-800">
+                            <span class="text-base font-extrabold text-white block">AI</span>
+                            <span class="text-[9px] text-slate-500 uppercase">OpenAI</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- 3. DISCIPLINES & EDUCATION -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-6 border-t border-slate-800">
+            <div class="lg:col-span-6 space-y-3">
+                <h3 class="text-xs font-bold uppercase tracking-widest text-slate-300 font-mono flex items-center gap-2">
+                    <i data-lucide="layers" class="w-4 h-4 text-slate-400"></i> Engineering Disciplines
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-white/[0.03] border border-slate-800 text-xs text-slate-300 font-mono rounded-xl">Clean Architecture</span>
+                    <span class="px-3 py-1 bg-white/[0.03] border border-slate-800 text-xs text-slate-300 font-mono rounded-xl">CQRS &amp; MediatR</span>
+                    <span class="px-3 py-1 bg-white/[0.03] border border-slate-800 text-xs text-slate-300 font-mono rounded-xl">Redis Caching</span>
+                    <span class="px-3 py-1 bg-white/[0.03] border border-slate-800 text-xs text-slate-300 font-mono rounded-xl">Octopus Deploy</span>
+                </div>
+            </div>
+
+            <div class="lg:col-span-6 space-y-3">
+                <h3 class="text-xs font-bold uppercase tracking-widest text-slate-300 font-mono flex items-center gap-2">
+                    <i data-lucide="graduation-cap" class="w-4 h-4 text-slate-400"></i> Education &amp; Certifications
+                </h3>
+                <div class="space-y-2 text-xs text-slate-400 font-mono">
+                    <div class="p-2.5 rounded-xl bg-white/[0.03] border border-slate-800 flex justify-between items-center">
+                        <span>B.Sc. Information Technology (DSPMU)</span>
+                        <span class="text-slate-500">2022</span>
+                    </div>
+                    <div class="p-2.5 rounded-xl bg-white/[0.03] border border-slate-800 flex justify-between items-center">
+                        <span>Azure OpenAI &amp; Secure Azure Workloads</span>
+                        <span class="text-slate-500">Certified</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

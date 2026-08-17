@@ -28,15 +28,12 @@
             box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
         }
 
-        .circuit-line {
-            position: relative;
+        .profile-avatar-img {
+            object-fit: cover;
+            object-position: center 12%;
+            transform: scale(1.12);
+            transition: transform 0.3s ease;
         }
-
-            .circuit-line::after {
-                content: '';
-                position: absolute;
-                background: #334155;
-            }
 
         @@media print {
             .no-print {
@@ -130,16 +127,16 @@
                 </div>
             </div>
 
-            <!-- Center Hub: Logo/Avatar Profile Frame -->
+            <!-- Center Hub: Profile Frame with High-Accuracy Alignment -->
             <div class="lg:col-span-4 flex flex-col items-center justify-center space-y-6 text-center">
 
-                <!-- Circular Profile matching the Home Logo asset -->
-                <div class="relative w-48 h-48 sm:w-56 sm:h-56 rounded-full p-2 bg-gradient-to-b from-slate-600 via-slate-800 to-transparent shadow-2xl">
-                    <div class="w-full h-full rounded-full overflow-hidden border-2 border-slate-700 bg-slate-900 flex items-center justify-center">
+                <!-- Circular Profile with Glass Tint Orbit -->
+                <div class="relative w-48 h-48 sm:w-56 sm:h-56 rounded-full p-2 bg-gradient-to-b from-sky-400/40 via-slate-800 to-transparent shadow-[0_0_35px_rgba(56,189,248,0.2)]">
+                    <div class="w-full h-full rounded-full overflow-hidden border-2 border-sky-400/50 bg-[#0c1220] flex items-center justify-center shadow-inner">
                         <img src="~/images/ashish.png"
                              alt="Ashish Kumar Pathak"
-                             class="w-full h-full object-cover object-top"
-                             onerror="this.onerror=null; this.src='/images/ashish.png';" />
+                             class="w-full h-full profile-avatar-img"
+                             onerror="if (!this.dataset.tried1) { this.dataset.tried1 = true; this.src='/images/ashish.png'; } else if (!this.dataset.tried2) { this.dataset.tried2 = true; this.src='/ashish.png'; } else { this.onerror=null; this.src='/images/profile.png'; }" />
                     </div>
                 </div>
 

@@ -1,286 +1,267 @@
-﻿@page "/Resume"
+﻿@page
 @{
     Layout = null;
 }
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Official Resume | Ashish Kumar Pathak</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" />
+    <title>Ashish Kumar Pathak - Visual Infographic Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
     <style>
         body {
-            background-color: #0b0f19 !important;
-            color: #e2e8f0;
-            font-family: system-ui, -apple-system, sans-serif;
+            background-color: #070A12;
+            color: #F1F5F9;
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
-        .resume-container {
-            max-width: 980px;
-            margin: 0 auto;
+        .glass-panel {
+            background: rgba(18, 24, 38, 0.75);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
         }
 
-        .action-bar {
-            background: #111827;
-            border: 1px solid #1f293d;
-            border-radius: 100px;
-            padding: 12px 24px;
+        .circuit-line {
+            position: relative;
         }
 
-        .resume-card {
-            background: #131b2e;
-            border: 1px solid #1f2a44;
-            border-radius: 24px;
-            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
-        }
+            .circuit-line::after {
+                content: '';
+                position: absolute;
+                background: #334155;
+            }
 
-        .profile-img-frame {
-            width: 105px;
-            height: 105px;
-            border-radius: 20px;
-            object-fit: cover;
-            border: 2px solid #38bdf8;
-            box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
-            background: #090d16;
-        }
+        @@media print {
+            .no-print {
+                display: none !important;
+            }
 
-        .info-box {
-            background: #090d16;
-            border: 1px solid #162035;
-            border-radius: 16px;
-        }
+            body {
+                background: #070A12 !important;
+                -webkit-print-color-adjust: exact;
+            }
 
-        .section-icon {
-            background: #1d2b45;
-            color: #38bdf8;
-            width: 38px;
-            height: 38px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-        }
-
-        .grid-box {
-            background: #0d1424;
-            border: 1px solid #192338;
-            border-radius: 14px;
+            .print-container {
+                padding: 0 !important;
+                max-width: 100% !important;
+            }
         }
     </style>
 </head>
-<body>
+<body class="py-8 px-4 selection:bg-slate-700 selection:text-white">
 
-    <div class="py-5">
-        <div class="container resume-container">
-
-            <!-- Top Action Bar -->
-            <div class="action-bar d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4 shadow">
-                <a href="/" class="btn btn-outline-light btn-sm px-4 rounded-pill border-secondary text-light fw-medium">
-                    &larr; Back to Portfolio
-                </a>
-                <div class="d-flex align-items-center gap-3">
-                    <span class="badge bg-success bg-opacity-25 text-success border border-success border-opacity-50 px-3 py-2 rounded-pill fw-medium small">
-                        &bull; ATS Verified Standard
-                    </span>
-                    <a href="~/files/Ashish_Kumar_Pathak_Resume.pdf" download class="btn btn-primary btn-sm px-4 py-2 rounded-pill fw-bold shadow">
-                        <i class="bi bi-download me-1"></i> Download Official PDF
-                    </a>
-                </div>
-            </div>
-
-            <!-- Main Resume Document -->
-            <div class="resume-card p-4 p-md-5">
-
-                <!-- Header Section with Profile Image -->
-                <div class="border-bottom border-secondary border-opacity-25 pb-4 mb-4">
-                    <div class="row align-items-center g-4">
-                        <div class="col-md-7">
-                            <div class="d-flex align-items-center gap-4">
-                                <img src="~/images/ashish.png"
-                                     onerror="this.onerror=null; this.src='/images/profile.png';"
-                                     alt="Ashish Kumar Pathak"
-                                     class="profile-img-frame flex-shrink-0" />
-                                <div>
-                                    <h1 class="text-white fw-bolder mb-1 h2">Ashish Kumar Pathak</h1>
-                                    <h5 class="text-primary fw-semibold mb-2" style="color: #38bdf8 !important;">Full-Stack Software Engineer &amp; .NET Specialist</h5>
-                                    <div class="text-secondary small">
-                                        Ranchi, Jharkhand, India &bull; CTO &amp; Co-Founder at ASpynix
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="info-box p-3 small">
-                                <div class="d-flex mb-1">
-                                    <span class="text-secondary fw-semibold" style="width: 70px;">GitHub:</span>
-                                    <a href="https://github.com/pathakashishindia" target="_blank" class="text-info text-decoration-none text-truncate">github.com/pathakashishindia</a>
-                                </div>
-                                <div class="d-flex mb-1">
-                                    <span class="text-secondary fw-semibold" style="width: 70px;">Org:</span>
-                                    <a href="https://aspynix.com" target="_blank" class="text-info text-decoration-none">aspynix.com</a>
-                                </div>
-                                <div class="d-flex">
-                                    <span class="text-secondary fw-semibold" style="width: 70px;">Status:</span>
-                                    <span class="text-success fw-medium">Available for Senior Roles</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Professional Summary -->
-                <div class="mb-5">
-                    <div class="d-flex align-items-center gap-2 mb-3">
-                        <div class="section-icon">
-                            <i class="bi bi-file-earmark-person-fill fs-5"></i>
-                        </div>
-                        <h5 class="text-uppercase fw-bold text-white mb-0">Professional Summary</h5>
-                    </div>
-                    <p class="text-light text-opacity-75 lh-lg mb-0">
-                        Full-Stack Software Engineer with robust expertise in enterprise application development, distributed backend architecture, and database optimization using ASP.NET Core, C#, Entity Framework Core, and Microsoft SQL Server. Proven history of architecting end-to-end multi-tier web platforms, designing resilient RESTful APIs, and implementing automated DevOps pipelines across Azure DevOps, Docker, and cloud web app instances. Co-Founder and CTO driving strategic engineering initiatives from initial database schema creation to zero-downtime global production release.
-                    </p>
-                </div>
-
-                <!-- Technical Competencies -->
-                <div class="mb-5">
-                    <div class="d-flex align-items-center gap-2 mb-3">
-                        <div class="section-icon">
-                            <i class="bi bi-cpu-fill fs-5"></i>
-                        </div>
-                        <h5 class="text-uppercase fw-bold text-white mb-0">Technical Competencies</h5>
-                    </div>
-                    <div class="row g-3">
-                        <div class="col-md-6">
-                            <div class="grid-box p-3 h-100">
-                                <h6 class="text-warning fw-bold mb-2">Backend &amp; Languages</h6>
-                                <p class="text-light text-opacity-75 small mb-0 lh-base">
-                                    C#, .NET 8 / .NET Core, ASP.NET MVC 5, Web API REST Services, LINQ, Asynchronous Programming &amp; File I/O, Dependency Injection, Microservices Architecture, Unit Testing.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="grid-box p-3 h-100">
-                                <h6 class="text-warning fw-bold mb-2">Database &amp; Data Engineering</h6>
-                                <p class="text-light text-opacity-75 small mb-0 lh-base">
-                                    Microsoft SQL Server, Entity Framework Core, LINQ-to-Entities, SQL Performance Tuning, Complex Joins, Schema Migrations, Stored Procedures, Database Restore &amp; User Mapping Management.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="grid-box p-3 h-100">
-                                <h6 class="text-warning fw-bold mb-2">DevOps, Cloud &amp; Automation</h6>
-                                <p class="text-light text-opacity-75 small mb-0 lh-base">
-                                    Docker Containers, Azure App Services, Azure DevOps Pipelines, GitHub Actions Workflows, CI/CD Pipeline Engineering, Octopus Deploy, Tidal Enterprise Job Scheduler, ServiceNow Ticket Management.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="grid-box p-3 h-100">
-                                <h6 class="text-warning fw-bold mb-2">Frontend, Logging &amp; Tools</h6>
-                                <p class="text-light text-opacity-75 small mb-0 lh-base">
-                                    Razor Pages, HTML5/CSS3, JavaScript (ES6+), Bootstrap 5, XAML, Log4net, Structured Global Error Handling Middleware, Git Source Control, Visual Studio 2022, SSMS.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Professional Experience -->
-                <div class="mb-5">
-                    <div class="d-flex align-items-center gap-2 mb-3">
-                        <div class="section-icon">
-                            <i class="bi bi-briefcase-fill fs-5"></i>
-                        </div>
-                        <h5 class="text-uppercase fw-bold text-white mb-0">Professional Experience</h5>
-                    </div>
-                    <div class="grid-box p-4">
-                        <div class="d-flex flex-wrap justify-content-between align-items-baseline mb-2">
-                            <div>
-                                <h6 class="text-white fw-bold mb-0 fs-5">Chief Technology Officer &amp; Co-Founder</h6>
-                                <span class="text-primary fw-semibold small" style="color: #38bdf8 !important;">ASpynix &bull; Product Architecture &amp; Engineering</span>
-                            </div>
-                            <span class="badge bg-secondary bg-opacity-50 text-light px-3 py-2 rounded-pill small">2025 &ndash; Present</span>
-                        </div>
-                        <ul class="text-light text-opacity-75 small mb-0 ps-3 lh-lg">
-                            <li>Direct overall technical vision, software engineering lifecycles, and architectural governance across full-stack .NET and database initiatives.</li>
-                            <li>Engineered enterprise-grade microservice and monolithic backends using ASP.NET Core and Microsoft SQL Server, reducing API latency and securing multi-tenant data workflows.</li>
-                            <li>Constructed end-to-end automated deployment systems via GitHub Actions and Docker containers for continuous, zero-downtime application delivery.</li>
-                            <li>Designed custom dependency injection models, robust asynchronous I/O managers, and central structured logging middleware with Log4net and Serilog.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Enterprise Projects -->
-                <div class="mb-5">
-                    <div class="d-flex align-items-center gap-2 mb-3">
-                        <div class="section-icon">
-                            <i class="bi bi-diagram-3-fill fs-5"></i>
-                        </div>
-                        <h5 class="text-uppercase fw-bold text-white mb-0">Enterprise Projects &amp; Deployments</h5>
-                    </div>
-
-                    <div class="grid-box p-3 mb-3">
-                        <div class="d-flex justify-content-between align-items-center mb-1">
-                            <span class="text-white fw-bold">PANKH &ndash; Enterprise Cloud Management Portal</span>
-                            <span class="badge bg-primary bg-opacity-20 text-primary small">Azure Web Apps</span>
-                        </div>
-                        <p class="text-light text-opacity-75 small mb-2">
-                            Engineered an automated web management application leveraging ASP.NET Core and Entity Framework Core. Integrated CI/CD automation via GitHub Workflows and deployed with high-availability configurations on Microsoft Azure.
-                        </p>
-                        <div class="text-secondary small">
-                            <strong>Technologies:</strong> ASP.NET Core, C#, Azure DevOps, GitHub Actions, SQL Server
-                        </div>
-                    </div>
-
-                    <div class="grid-box p-3 mb-3">
-                        <div class="d-flex justify-content-between align-items-center mb-1">
-                            <span class="text-white fw-bold">URVI &ndash; Food &amp; Grocery Delivery Platform Architecture</span>
-                            <span class="badge bg-info bg-opacity-20 text-info small">System Architecture</span>
-                        </div>
-                        <p class="text-light text-opacity-75 small mb-2">
-                            Architected complete relational database models, C# API controllers, and client layouts in XAML. Configured real-time order processing pipelines, item catalog indexing, and resilient cart state managers.
-                        </p>
-                        <div class="text-secondary small">
-                            <strong>Technologies:</strong> .NET Web API, C#, XAML, Relational Database Modeling, JSON Data Services
-                        </div>
-                    </div>
-
-                    <div class="grid-box p-3">
-                        <div class="d-flex justify-content-between align-items-center mb-1">
-                            <span class="text-white fw-bold">High-Performance Portfolio &amp; System Showcase</span>
-                            <span class="badge bg-success bg-opacity-20 text-success small">Docker &amp; Linux Cloud</span>
-                        </div>
-                        <p class="text-light text-opacity-75 small mb-2">
-                            Built and containerized a responsive .NET 8 Razor Pages portfolio engine using multi-stage Docker builds. Features optimized asset pipelines, zero-downtime cloud hosting, and integrated ATS document generation.
-                        </p>
-                        <div class="text-secondary small">
-                            <strong>Technologies:</strong> .NET 8, Docker Multi-Stage, Razor Pages, Bootstrap 5, Cloud Host
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Education -->
-                <div>
-                    <div class="d-flex align-items-center gap-2 mb-3">
-                        <div class="section-icon">
-                            <i class="bi bi-mortarboard-fill fs-5"></i>
-                        </div>
-                        <h5 class="text-uppercase fw-bold text-white mb-0">Education &amp; Credentials</h5>
-                    </div>
-                    <div class="grid-box p-3 d-flex flex-wrap justify-content-between align-items-center">
-                        <div>
-                            <h6 class="text-white fw-bold mb-1">Bachelor of Science in Information Technology (B.Sc. IT)</h6>
-                            <p class="text-secondary small mb-0">Specialized in Object-Oriented Software Engineering, Data Structures, Relational Database Systems &amp; Web Architectures.</p>
-                        </div>
-                        <span class="badge bg-secondary px-3 py-2 rounded-pill mt-2 mt-md-0">Graduated</span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+    <!-- Top Action Bar -->
+    <div class="max-w-5xl mx-auto mb-6 flex justify-between items-center no-print">
+        <a href="/" class="inline-flex items-center gap-2 text-xs font-bold text-slate-400 hover:text-white transition">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Portfolio
+        </a>
+        <button onclick="window.print()" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white text-xs font-bold flex items-center gap-2 shadow-md transition">
+            <i data-lucide="printer" class="w-4 h-4"></i> Print / Save Visual PDF
+        </button>
     </div>
 
+    <!-- MAIN INFOGRAPHIC RESUME SHEET (Grey / Glass / Tint Aesthetic) -->
+    <div class="max-w-5xl mx-auto glass-panel p-8 sm:p-12 rounded-3xl space-y-10 print-container border border-slate-800">
+
+        <!-- 1. HEADER WITH NAME & TOP METRICS -->
+        <div class="text-center space-y-2 border-b border-slate-800 pb-8">
+            <h1 class="text-3xl sm:text-4xl font-extrabold uppercase tracking-tight text-white font-mono">
+                Ashish Kumar Pathak
+            </h1>
+            <p class="text-xs sm:text-sm font-bold text-slate-400 tracking-wider uppercase font-mono">
+                Full-Stack .NET Developer | C#, ASP.NET Core, Angular, SQL Server, Azure
+            </p>
+            <p class="text-xs text-slate-500 font-mono">Greater Noida, India • 4+ Years Experience • Available for Global Remote</p>
+        </div>
+
+        <!-- 2. CENTRAL INFOGRAPHIC HUB (Connecting Left Experience & Right Contact/Skills) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+            <!-- Left Side: Experience & Achievements Nodes -->
+            <div class="lg:col-span-4 space-y-6">
+                <div class="flex items-center gap-2 border-b border-slate-800 pb-2">
+                    <i data-lucide="briefcase" class="w-4 h-4 text-slate-400"></i>
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-slate-300 font-mono">Experience &amp; Achievements</h2>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- 2023 - Present Node -->
+                    <div class="p-4 rounded-2xl bg-white/[0.03] border border-slate-800 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px] font-bold">2023 – Present</span>
+                            <span class="text-[10px] text-slate-500 font-mono">Wipro Ltd</span>
+                        </div>
+                        <h3 class="text-xs font-bold text-white">Full-Stack .NET Developer (CHS Inc.)</h3>
+                        <p class="text-[11px] text-slate-400 leading-relaxed">
+                            Engineered PlanetPress JDE C# middleware cutting document processing from 30–40 mins to seconds. Shipped automated account reporting suites.
+                        </p>
+                    </div>
+
+                    <!-- Jan 2023 Node -->
+                    <div class="p-4 rounded-2xl bg-white/[0.03] border border-slate-800 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px] font-bold">JAN 2023</span>
+                            <span class="text-[10px] text-slate-500 font-mono">Tapestry Inc</span>
+                        </div>
+                        <h3 class="text-xs font-bold text-white">Full-Stack Developer (Junior)</h3>
+                        <p class="text-[11px] text-slate-400 leading-relaxed">
+                            Enhanced .NET Core live checkout workflows, payment capture, and tuned SQL execution plans resolving concurrency deadlocks.
+                        </p>
+                    </div>
+
+                    <!-- 2022 Node -->
+                    <div class="p-4 rounded-2xl bg-white/[0.03] border border-slate-800 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px] font-bold">JUL 2022</span>
+                            <span class="text-[10px] text-slate-500 font-mono">Coach Inc</span>
+                        </div>
+                        <h3 class="text-xs font-bold text-white">Database &amp; .NET Support Trainee</h3>
+                        <p class="text-[11px] text-slate-400 leading-relaxed">
+                            24/7 SQL Server production operations, monitored Tidal ETL batch jobs, and implemented persistent code-level fixes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Center Hub: Profile Frame (`/ashish.jpg`) & Quotation -->
+            <div class="lg:col-span-4 flex flex-col items-center justify-center space-y-6 text-center">
+
+                <!-- Circular Profile with Glass Tint Orbit -->
+                <div class="relative w-48 h-48 sm:w-56 sm:h-56 rounded-full p-2 bg-gradient-to-b from-slate-600 via-slate-800 to-transparent shadow-2xl">
+                    <div class="w-full h-full rounded-full overflow-hidden border-2 border-slate-700 bg-slate-900">
+                        <img src="/ashish.jpg" alt="Ashish Kumar Pathak" class="w-full h-full object-cover object-top" onerror="this.src='/portrait.jpg'" />
+                    </div>
+                </div>
+
+                <!-- Quote Box -->
+                <div class="p-4 rounded-2xl bg-white/[0.02] border border-slate-800 text-xs text-slate-400 leading-relaxed italic">
+                    "Specializing in end-to-end enterprise software engineering, distributed systems resilience, and transforming operational bottlenecks into automated seconds."
+                </div>
+
+                <!-- Central Hardware / Architecture Vector Badge -->
+                <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center gap-3 text-xs font-mono text-slate-300">
+                    <i data-lucide="cpu" class="w-5 h-5 text-slate-400"></i>
+                    <span>Full-Stack Architecture Hub</span>
+                </div>
+            </div>
+
+            <!-- Right Side: Contact & Software Skills -->
+            <div class="lg:col-span-4 space-y-6">
+
+                <!-- Contact Block -->
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2 border-b border-slate-800 pb-2">
+                        <i data-lucide="send" class="w-4 h-4 text-slate-400"></i>
+                        <h2 class="text-xs font-bold uppercase tracking-widest text-slate-300 font-mono">Contact Details</h2>
+                    </div>
+
+                    <div class="space-y-2 text-xs text-slate-400 font-mono">
+                        <div class="p-2.5 rounded-xl bg-white/[0.03] border border-slate-800 flex items-center gap-2.5">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-slate-400 shrink-0"></i>
+                            <span class="truncate">Greater Noida, India</span>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-white/[0.03] border border-slate-800 flex items-center gap-2.5">
+                            <i data-lucide="phone" class="w-4 h-4 text-slate-400 shrink-0"></i>
+                            <span class="truncate">+91 62041 66367</span>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-white/[0.03] border border-slate-800 flex items-center gap-2.5">
+                            <i data-lucide="mail" class="w-4 h-4 text-slate-400 shrink-0"></i>
+                            <span class="truncate">pathak.ashishindia@gmail.com</span>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-white/[0.03] border border-slate-800 flex items-center gap-2.5">
+                            <i data-lucide="linkedin" class="w-4 h-4 text-slate-400 shrink-0"></i>
+                            <span class="truncate">linkedin.com/in/ashish-pathak</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Software Skills Circles (Glass Tint Badges) -->
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2 border-b border-slate-800 pb-2">
+                        <i data-lucide="code-2" class="w-4 h-4 text-slate-400"></i>
+                        <h2 class="text-xs font-bold uppercase tracking-widest text-slate-300 font-mono">Software Arsenal</h2>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-2 text-center font-mono">
+                        <div class="p-3 rounded-2xl bg-white/[0.03] border border-slate-800">
+                            <span class="text-base font-extrabold text-white block">C#</span>
+                            <span class="text-[9px] text-slate-500 uppercase">.NET Core</span>
+                        </div>
+                        <div class="p-3 rounded-2xl bg-white/[0.03] border border-slate-800">
+                            <span class="text-base font-extrabold text-white block">SQL</span>
+                            <span class="text-[9px] text-slate-500 uppercase">T-SQL</span>
+                        </div>
+                        <div class="p-3 rounded-2xl bg-white/[0.03] border border-slate-800">
+                            <span class="text-base font-extrabold text-white block">NG</span>
+                            <span class="text-[9px] text-slate-500 uppercase">Angular</span>
+                        </div>
+                        <div class="p-3 rounded-2xl bg-white/[0.03] border border-slate-800">
+                            <span class="text-base font-extrabold text-white block">AZ</span>
+                            <span class="text-[9px] text-slate-500 uppercase">DevOps</span>
+                        </div>
+                        <div class="p-3 rounded-2xl bg-white/[0.03] border border-slate-800">
+                            <span class="text-base font-extrabold text-white block">EF</span>
+                            <span class="text-[9px] text-slate-500 uppercase">EF Core</span>
+                        </div>
+                        <div class="p-3 rounded-2xl bg-white/[0.03] border border-slate-800">
+                            <span class="text-base font-extrabold text-white block">AI</span>
+                            <span class="text-[9px] text-slate-500 uppercase">OpenAI</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- 3. BOTTOM ROW: EDUCATION & DISCIPLINES -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-6 border-t border-slate-800">
+
+            <!-- Core Disciplines -->
+            <div class="lg:col-span-6 space-y-3">
+                <h3 class="text-xs font-bold uppercase tracking-widest text-slate-300 font-mono flex items-center gap-2">
+                    <i data-lucide="layers" class="w-4 h-4 text-slate-400"></i> Engineering Disciplines
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-white/[0.03] border border-slate-800 text-xs text-slate-300 font-mono rounded-xl">Clean Architecture</span>
+                    <span class="px-3 py-1 bg-white/[0.03] border border-slate-800 text-xs text-slate-300 font-mono rounded-xl">CQRS &amp; MediatR</span>
+                    <span class="px-3 py-1 bg-white/[0.03] border border-slate-800 text-xs text-slate-300 font-mono rounded-xl">Redis Distributed Caching</span>
+                    <span class="px-3 py-1 bg-white/[0.03] border border-slate-800 text-xs text-slate-300 font-mono rounded-xl">Microservices Concepts</span>
+                    <span class="px-3 py-1 bg-white/[0.03] border border-slate-800 text-xs text-slate-300 font-mono rounded-xl">Octopus Release Automation</span>
+                    <span class="px-3 py-1 bg-white/[0.03] border border-slate-800 text-xs text-slate-300 font-mono rounded-xl">Tidal Scheduler ETL</span>
+                </div>
+            </div>
+
+            <!-- Education & Certifications -->
+            <div class="lg:col-span-6 space-y-3">
+                <h3 class="text-xs font-bold uppercase tracking-widest text-slate-300 font-mono flex items-center gap-2">
+                    <i data-lucide="graduation-cap" class="w-4 h-4 text-slate-400"></i> Education &amp; Certifications
+                </h3>
+                <div class="space-y-2 text-xs text-slate-400 font-mono">
+                    <div class="p-2.5 rounded-xl bg-white/[0.03] border border-slate-800 flex justify-between items-center">
+                        <span>B.Sc. Information Technology (DSPMU)</span>
+                        <span class="text-slate-500">2022</span>
+                    </div>
+                    <div class="p-2.5 rounded-xl bg-white/[0.03] border border-slate-800 flex justify-between items-center">
+                        <span>Azure OpenAI &amp; Secure Azure Workloads</span>
+                        <span class="text-slate-500">Certified</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>

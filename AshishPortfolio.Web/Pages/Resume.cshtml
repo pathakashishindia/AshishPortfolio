@@ -1,271 +1,286 @@
 ﻿@page "/Resume"
 @{
-    ViewData["Title"] = "Official Resume | Ashish Kumar Pathak";
+    Layout = null;
 }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Official Resume | Ashish Kumar Pathak</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" />
+    <style>
+        body {
+            background-color: #0b0f19 !important;
+            color: #e2e8f0;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
 
-<style>
-    body {
-        background-color: #0b0e14 !important;
-        color: #e2e8f0;
-    }
+        .resume-container {
+            max-width: 980px;
+            margin: 0 auto;
+        }
 
-    .resume-container {
-        max-width: 960px;
-        margin: 0 auto;
-    }
+        .action-bar {
+            background: #111827;
+            border: 1px solid #1f293d;
+            border-radius: 100px;
+            padding: 12px 24px;
+        }
 
-    .action-bar {
-        background: #111827;
-        border: 1px solid #1f293d;
-        border-radius: 100px;
-        padding: 10px 24px;
-    }
+        .resume-card {
+            background: #131b2e;
+            border: 1px solid #1f2a44;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+        }
 
-    .resume-card {
-        background: #131b2e;
-        border: 1px solid #1f2a44;
-        border-radius: 24px;
-        box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
-    }
+        .profile-img-frame {
+            width: 105px;
+            height: 105px;
+            border-radius: 20px;
+            object-fit: cover;
+            border: 2px solid #38bdf8;
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
+            background: #090d16;
+        }
 
-    .info-box {
-        background: #090d16;
-        border: 1px solid #162035;
-        border-radius: 16px;
-    }
+        .info-box {
+            background: #090d16;
+            border: 1px solid #162035;
+            border-radius: 16px;
+        }
 
-    .section-icon {
-        background: #1d2b45;
-        color: #38bdf8;
-        width: 38px;
-        height: 38px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 10px;
-    }
+        .section-icon {
+            background: #1d2b45;
+            color: #38bdf8;
+            width: 38px;
+            height: 38px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
 
-    .grid-box {
-        background: #0d1424;
-        border: 1px solid #192338;
-        border-radius: 14px;
-    }
-</style>
+        .grid-box {
+            background: #0d1424;
+            border: 1px solid #192338;
+            border-radius: 14px;
+        }
+    </style>
+</head>
+<body>
 
-<div class="py-5">
-    <div class="container resume-container">
+    <div class="py-5">
+        <div class="container resume-container">
 
-        <!-- Top Action Bar -->
-        <div class="action-bar d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4 shadow">
-            <a asp-page="/Index" class="btn btn-outline-light btn-sm px-4 rounded-pill border-secondary text-light fw-medium">
-                &larr; Back to Portfolio
-            </a>
-            <div class="d-flex align-items-center gap-3">
-                <span class="badge bg-success bg-opacity-20 text-success border border-success border-opacity-25 px-3 py-2 rounded-pill fw-medium small">
-                    &bull; ATS Verified Standard
-                </span>
-                <a href="~/files/Ashish_Kumar_Pathak_Resume.pdf" download class="btn btn-primary btn-sm px-4 py-2 rounded-pill fw-bold shadow">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download me-1 align-text-bottom" viewBox="0 0 16 16">
-                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
-                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
-                    </svg>
-                    Download Official PDF
+            <!-- Top Action Bar -->
+            <div class="action-bar d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4 shadow">
+                <a href="/" class="btn btn-outline-light btn-sm px-4 rounded-pill border-secondary text-light fw-medium">
+                    &larr; Back to Portfolio
                 </a>
+                <div class="d-flex align-items-center gap-3">
+                    <span class="badge bg-success bg-opacity-25 text-success border border-success border-opacity-50 px-3 py-2 rounded-pill fw-medium small">
+                        &bull; ATS Verified Standard
+                    </span>
+                    <a href="~/files/Ashish_Kumar_Pathak_Resume.pdf" download class="btn btn-primary btn-sm px-4 py-2 rounded-pill fw-bold shadow">
+                        <i class="bi bi-download me-1"></i> Download Official PDF
+                    </a>
+                </div>
             </div>
-        </div>
 
-        <!-- Main Resume Card -->
-        <div class="resume-card p-4 p-md-5">
+            <!-- Main Resume Document -->
+            <div class="resume-card p-4 p-md-5">
 
-            <!-- Header Section -->
-            <div class="border-bottom border-secondary border-opacity-25 pb-4 mb-4">
-                <div class="row align-items-center g-3">
-                    <div class="col-md-7">
-                        <h1 class="text-white fw-bolder mb-1 display-6">Ashish Kumar Pathak</h1>
-                        <h4 class="text-primary fw-semibold mb-2" style="color: #38bdf8 !important;">Full-Stack Software Engineer &amp; .NET Specialist</h4>
+                <!-- Header Section with Profile Image -->
+                <div class="border-bottom border-secondary border-opacity-25 pb-4 mb-4">
+                    <div class="row align-items-center g-4">
+                        <div class="col-md-7">
+                            <div class="d-flex align-items-center gap-4">
+                                <img src="~/images/ashish.png"
+                                     onerror="this.onerror=null; this.src='/images/profile.png';"
+                                     alt="Ashish Kumar Pathak"
+                                     class="profile-img-frame flex-shrink-0" />
+                                <div>
+                                    <h1 class="text-white fw-bolder mb-1 h2">Ashish Kumar Pathak</h1>
+                                    <h5 class="text-primary fw-semibold mb-2" style="color: #38bdf8 !important;">Full-Stack Software Engineer &amp; .NET Specialist</h5>
+                                    <div class="text-secondary small">
+                                        Ranchi, Jharkhand, India &bull; CTO &amp; Co-Founder at ASpynix
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="info-box p-3 small">
+                                <div class="d-flex mb-1">
+                                    <span class="text-secondary fw-semibold" style="width: 70px;">GitHub:</span>
+                                    <a href="https://github.com/pathakashishindia" target="_blank" class="text-info text-decoration-none text-truncate">github.com/pathakashishindia</a>
+                                </div>
+                                <div class="d-flex mb-1">
+                                    <span class="text-secondary fw-semibold" style="width: 70px;">Org:</span>
+                                    <a href="https://aspynix.com" target="_blank" class="text-info text-decoration-none">aspynix.com</a>
+                                </div>
+                                <div class="d-flex">
+                                    <span class="text-secondary fw-semibold" style="width: 70px;">Status:</span>
+                                    <span class="text-success fw-medium">Available for Senior Roles</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Summary -->
+                <div class="mb-5">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <div class="section-icon">
+                            <i class="bi bi-file-earmark-person-fill fs-5"></i>
+                        </div>
+                        <h5 class="text-uppercase fw-bold text-white mb-0">Professional Summary</h5>
+                    </div>
+                    <p class="text-light text-opacity-75 lh-lg mb-0">
+                        Full-Stack Software Engineer with robust expertise in enterprise application development, distributed backend architecture, and database optimization using ASP.NET Core, C#, Entity Framework Core, and Microsoft SQL Server. Proven history of architecting end-to-end multi-tier web platforms, designing resilient RESTful APIs, and implementing automated DevOps pipelines across Azure DevOps, Docker, and cloud web app instances. Co-Founder and CTO driving strategic engineering initiatives from initial database schema creation to zero-downtime global production release.
+                    </p>
+                </div>
+
+                <!-- Technical Competencies -->
+                <div class="mb-5">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <div class="section-icon">
+                            <i class="bi bi-cpu-fill fs-5"></i>
+                        </div>
+                        <h5 class="text-uppercase fw-bold text-white mb-0">Technical Competencies</h5>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="grid-box p-3 h-100">
+                                <h6 class="text-warning fw-bold mb-2">Backend &amp; Languages</h6>
+                                <p class="text-light text-opacity-75 small mb-0 lh-base">
+                                    C#, .NET 8 / .NET Core, ASP.NET MVC 5, Web API REST Services, LINQ, Asynchronous Programming &amp; File I/O, Dependency Injection, Microservices Architecture, Unit Testing.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="grid-box p-3 h-100">
+                                <h6 class="text-warning fw-bold mb-2">Database &amp; Data Engineering</h6>
+                                <p class="text-light text-opacity-75 small mb-0 lh-base">
+                                    Microsoft SQL Server, Entity Framework Core, LINQ-to-Entities, SQL Performance Tuning, Complex Joins, Schema Migrations, Stored Procedures, Database Restore &amp; User Mapping Management.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="grid-box p-3 h-100">
+                                <h6 class="text-warning fw-bold mb-2">DevOps, Cloud &amp; Automation</h6>
+                                <p class="text-light text-opacity-75 small mb-0 lh-base">
+                                    Docker Containers, Azure App Services, Azure DevOps Pipelines, GitHub Actions Workflows, CI/CD Pipeline Engineering, Octopus Deploy, Tidal Enterprise Job Scheduler, ServiceNow Ticket Management.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="grid-box p-3 h-100">
+                                <h6 class="text-warning fw-bold mb-2">Frontend, Logging &amp; Tools</h6>
+                                <p class="text-light text-opacity-75 small mb-0 lh-base">
+                                    Razor Pages, HTML5/CSS3, JavaScript (ES6+), Bootstrap 5, XAML, Log4net, Structured Global Error Handling Middleware, Git Source Control, Visual Studio 2022, SSMS.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Experience -->
+                <div class="mb-5">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <div class="section-icon">
+                            <i class="bi bi-briefcase-fill fs-5"></i>
+                        </div>
+                        <h5 class="text-uppercase fw-bold text-white mb-0">Professional Experience</h5>
+                    </div>
+                    <div class="grid-box p-4">
+                        <div class="d-flex flex-wrap justify-content-between align-items-baseline mb-2">
+                            <div>
+                                <h6 class="text-white fw-bold mb-0 fs-5">Chief Technology Officer &amp; Co-Founder</h6>
+                                <span class="text-primary fw-semibold small" style="color: #38bdf8 !important;">ASpynix &bull; Product Architecture &amp; Engineering</span>
+                            </div>
+                            <span class="badge bg-secondary bg-opacity-50 text-light px-3 py-2 rounded-pill small">2025 &ndash; Present</span>
+                        </div>
+                        <ul class="text-light text-opacity-75 small mb-0 ps-3 lh-lg">
+                            <li>Direct overall technical vision, software engineering lifecycles, and architectural governance across full-stack .NET and database initiatives.</li>
+                            <li>Engineered enterprise-grade microservice and monolithic backends using ASP.NET Core and Microsoft SQL Server, reducing API latency and securing multi-tenant data workflows.</li>
+                            <li>Constructed end-to-end automated deployment systems via GitHub Actions and Docker containers for continuous, zero-downtime application delivery.</li>
+                            <li>Designed custom dependency injection models, robust asynchronous I/O managers, and central structured logging middleware with Log4net and Serilog.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Enterprise Projects -->
+                <div class="mb-5">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <div class="section-icon">
+                            <i class="bi bi-diagram-3-fill fs-5"></i>
+                        </div>
+                        <h5 class="text-uppercase fw-bold text-white mb-0">Enterprise Projects &amp; Deployments</h5>
+                    </div>
+
+                    <div class="grid-box p-3 mb-3">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="text-white fw-bold">PANKH &ndash; Enterprise Cloud Management Portal</span>
+                            <span class="badge bg-primary bg-opacity-20 text-primary small">Azure Web Apps</span>
+                        </div>
+                        <p class="text-light text-opacity-75 small mb-2">
+                            Engineered an automated web management application leveraging ASP.NET Core and Entity Framework Core. Integrated CI/CD automation via GitHub Workflows and deployed with high-availability configurations on Microsoft Azure.
+                        </p>
                         <div class="text-secondary small">
-                            Ranchi, Jharkhand, India &bull; CTO &amp; Co-Founder at ASpynix
+                            <strong>Technologies:</strong> ASP.NET Core, C#, Azure DevOps, GitHub Actions, SQL Server
                         </div>
                     </div>
-                    <div class="col-md-5">
-                        <div class="info-box p-3 small">
-                            <div class="d-flex mb-1">
-                                <span class="text-secondary fw-semibold" style="width: 70px;">GitHub:</span>
-                                <a href="https://github.com/pathakashishindia" target="_blank" class="text-info text-decoration-none text-truncate">github.com/pathakashishindia</a>
-                            </div>
-                            <div class="d-flex mb-1">
-                                <span class="text-secondary fw-semibold" style="width: 70px;">Org:</span>
-                                <a href="https://aspynix.com" target="_blank" class="text-info text-decoration-none">aspynix.com</a>
-                            </div>
-                            <div class="d-flex">
-                                <span class="text-secondary fw-semibold" style="width: 70px;">Status:</span>
-                                <span class="text-success fw-medium">Available for Senior Roles</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Professional Summary -->
-            <div class="mb-5">
-                <div class="d-flex align-items-center gap-2 mb-3">
-                    <div class="section-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-                            <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
-                        </svg>
+                    <div class="grid-box p-3 mb-3">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="text-white fw-bold">URVI &ndash; Food &amp; Grocery Delivery Platform Architecture</span>
+                            <span class="badge bg-info bg-opacity-20 text-info small">System Architecture</span>
+                        </div>
+                        <p class="text-light text-opacity-75 small mb-2">
+                            Architected complete relational database models, C# API controllers, and client layouts in XAML. Configured real-time order processing pipelines, item catalog indexing, and resilient cart state managers.
+                        </p>
+                        <div class="text-secondary small">
+                            <strong>Technologies:</strong> .NET Web API, C#, XAML, Relational Database Modeling, JSON Data Services
+                        </div>
                     </div>
-                    <h5 class="text-uppercase fw-bold text-white mb-0 letter-spacing-1">Professional Summary</h5>
-                </div>
-                <p class="text-light text-opacity-75 lh-lg mb-0">
-                    Full-Stack Software Engineer with robust expertise in enterprise application development, distributed backend architecture, and database optimization using ASP.NET Core, C#, Entity Framework Core, and Microsoft SQL Server. Proven history of architecting end-to-end multi-tier web platforms, designing resilient RESTful APIs, and implementing automated DevOps pipelines across Azure DevOps, Docker, and cloud web app instances. Co-Founder and CTO driving strategic engineering initiatives from initial database schema creation to zero-downtime global production release.
-                </p>
-            </div>
 
-            <!-- Technical Competencies -->
-            <div class="mb-5">
-                <div class="d-flex align-items-center gap-2 mb-3">
-                    <div class="section-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14A2.5 2.5 0 0 1 11.5 14v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0zm-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3h-7zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3z" />
-                        </svg>
-                    </div>
-                    <h5 class="text-uppercase fw-bold text-white mb-0">Technical Competencies</h5>
-                </div>
-                <div class="row g-3">
-                    <div class="col-md-6">
-                        <div class="grid-box p-3 h-100">
-                            <h6 class="text-warning fw-bold mb-2">Backend &amp; Languages</h6>
-                            <p class="text-light text-opacity-75 small mb-0 lh-base">
-                                C#, .NET 8 / .NET Core, ASP.NET MVC 5, Web API REST Services, LINQ, Asynchronous Programming &amp; File I/O, Dependency Injection, Microservices Architecture, Unit Testing.
-                            </p>
+                    <div class="grid-box p-3">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="text-white fw-bold">High-Performance Portfolio &amp; System Showcase</span>
+                            <span class="badge bg-success bg-opacity-20 text-success small">Docker &amp; Linux Cloud</span>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="grid-box p-3 h-100">
-                            <h6 class="text-warning fw-bold mb-2">Database &amp; Data Engineering</h6>
-                            <p class="text-light text-opacity-75 small mb-0 lh-base">
-                                Microsoft SQL Server, Entity Framework Core, LINQ-to-Entities, SQL Performance Tuning, Complex Joins, Schema Migrations, Stored Procedures, Database Restore &amp; User Mapping Management.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="grid-box p-3 h-100">
-                            <h6 class="text-warning fw-bold mb-2">DevOps, Cloud &amp; Automation</h6>
-                            <p class="text-light text-opacity-75 small mb-0 lh-base">
-                                Docker Containers, Azure App Services, Azure DevOps Pipelines, GitHub Actions Workflows, CI/CD Pipeline Engineering, Octopus Deploy, Tidal Enterprise Job Scheduler, ServiceNow Ticket Management.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="grid-box p-3 h-100">
-                            <h6 class="text-warning fw-bold mb-2">Frontend, Logging &amp; Tools</h6>
-                            <p class="text-light text-opacity-75 small mb-0 lh-base">
-                                Razor Pages, HTML5/CSS3, JavaScript (ES6+), Bootstrap 5, XAML, Log4net, Structured Global Error Handling Middleware, Git Source Control, Visual Studio 2022, SSMS.
-                            </p>
+                        <p class="text-light text-opacity-75 small mb-2">
+                            Built and containerized a responsive .NET 8 Razor Pages portfolio engine using multi-stage Docker builds. Features optimized asset pipelines, zero-downtime cloud hosting, and integrated ATS document generation.
+                        </p>
+                        <div class="text-secondary small">
+                            <strong>Technologies:</strong> .NET 8, Docker Multi-Stage, Razor Pages, Bootstrap 5, Cloud Host
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Professional Experience -->
-            <div class="mb-5">
-                <div class="d-flex align-items-center gap-2 mb-3">
-                    <div class="section-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z" />
-                        </svg>
+                <!-- Education -->
+                <div>
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <div class="section-icon">
+                            <i class="bi bi-mortarboard-fill fs-5"></i>
+                        </div>
+                        <h5 class="text-uppercase fw-bold text-white mb-0">Education &amp; Credentials</h5>
                     </div>
-                    <h5 class="text-uppercase fw-bold text-white mb-0">Professional Experience</h5>
-                </div>
-                <div class="grid-box p-4">
-                    <div class="d-flex flex-wrap justify-content-between align-items-baseline mb-2">
+                    <div class="grid-box p-3 d-flex flex-wrap justify-content-between align-items-center">
                         <div>
-                            <h6 class="text-white fw-bold mb-0 fs-5">Chief Technology Officer &amp; Co-Founder</h6>
-                            <span class="text-primary fw-semibold small" style="color: #38bdf8 !important;">ASpynix &bull; Product Architecture &amp; Engineering</span>
+                            <h6 class="text-white fw-bold mb-1">Bachelor of Science in Information Technology (B.Sc. IT)</h6>
+                            <p class="text-secondary small mb-0">Specialized in Object-Oriented Software Engineering, Data Structures, Relational Database Systems &amp; Web Architectures.</p>
                         </div>
-                        <span class="badge bg-secondary bg-opacity-50 text-light px-3 py-2 rounded-pill small">2025 &ndash; Present</span>
+                        <span class="badge bg-secondary px-3 py-2 rounded-pill mt-2 mt-md-0">Graduated</span>
                     </div>
-                    <ul class="text-light text-opacity-75 small mb-0 ps-3 lh-lg">
-                        <li>Direct overall technical vision, software engineering lifecycles, and architectural governance across full-stack .NET and database initiatives.</li>
-                        <li>Engineered enterprise-grade microservice and monolithic backends using ASP.NET Core and Microsoft SQL Server, reducing API latency and securing multi-tenant data workflows.</li>
-                        <li>Constructed end-to-end automated deployment systems via GitHub Actions and Docker containers for continuous, zero-downtime application delivery.</li>
-                        <li>Designed custom dependency injection models, robust asynchronous I/O managers, and central structured logging middleware with Log4net and Serilog.</li>
-                    </ul>
                 </div>
+
             </div>
-
-            <!-- Enterprise Projects -->
-            <div class="mb-5">
-                <div class="d-flex align-items-center gap-2 mb-3">
-                    <div class="section-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 2 7h5.5V6A1.5 1.5 0 0 1 6 4.5v-1zM8.5 3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM0 11.5A1.5 1.5 0 0 1 1.5 10h1A1.5 1.5 0 0 1 4 11.5v1A1.5 1.5 0 0 1 2.5 14h-1A1.5 1.5 0 0 1 0 12.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm4.5 0A1.5 1.5 0 0 1 7.5 10h1a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm4.5 0a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1z" />
-                        </svg>
-                    </div>
-                    <h5 class="text-uppercase fw-bold text-white mb-0">Enterprise Projects &amp; Deployments</h5>
-                </div>
-
-                <div class="grid-box p-3 mb-3">
-                    <div class="d-flex justify-content-between align-items-center mb-1">
-                        <span class="text-white fw-bold">PANKH &ndash; Enterprise Cloud Management Portal</span>
-                        <span class="badge bg-primary bg-opacity-20 text-primary small">Azure Web Apps</span>
-                    </div>
-                    <p class="text-light text-opacity-75 small mb-2">
-                        Engineered an automated web management application leveraging ASP.NET Core and Entity Framework Core. Integrated CI/CD automation via GitHub Workflows and deployed with high-availability configurations on Microsoft Azure.
-                    </p>
-                    <div class="text-secondary small">
-                        <strong>Technologies:</strong> ASP.NET Core, C#, Azure DevOps, GitHub Actions, SQL Server
-                    </div>
-                </div>
-
-                <div class="grid-box p-3 mb-3">
-                    <div class="d-flex justify-content-between align-items-center mb-1">
-                        <span class="text-white fw-bold">URVI &ndash; Food &amp; Grocery Delivery Platform Architecture</span>
-                        <span class="badge bg-info bg-opacity-20 text-info small">System Architecture</span>
-                    </div>
-                    <p class="text-light text-opacity-75 small mb-2">
-                        Architected complete relational database models, C# API controllers, and client layouts in XAML. Configured real-time order processing pipelines, item catalog indexing, and resilient cart state managers.
-                    </p>
-                    <div class="text-secondary small">
-                        <strong>Technologies:</strong> .NET Web API, C#, XAML, Relational Database Modeling, JSON Data Services
-                    </div>
-                </div>
-
-                <div class="grid-box p-3">
-                    <div class="d-flex justify-content-between align-items-center mb-1">
-                        <span class="text-white fw-bold">High-Performance Portfolio &amp; System Showcase</span>
-                        <span class="badge bg-success bg-opacity-20 text-success small">Docker &amp; Linux Cloud</span>
-                    </div>
-                    <p class="text-light text-opacity-75 small mb-2">
-                        Built and containerized a responsive .NET 8 Razor Pages portfolio engine using multi-stage Docker builds. Features optimized asset pipelines, zero-downtime cloud hosting, and integrated ATS document generation.
-                    </p>
-                    <div class="text-secondary small">
-                        <strong>Technologies:</strong> .NET 8, Docker Multi-Stage, Razor Pages, Bootstrap 5, Cloud Host
-                    </div>
-                </div>
-            </div>
-
-            <!-- Education -->
-            <div>
-                <div class="d-flex align-items-center gap-2 mb-3">
-                    <div class="section-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5zM8 8.46 1.758 5.965 8 3.052l6.242 2.913L8 8.46z" />
-                            <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032zm-.068 1.873.22-.748 3.496 1.311a.5.5 0 0 0 .352 0l3.496-1.311.22.748L8 12.46l-3.892-1.555z" />
-                        </svg>
-                    </div>
-                    <h5 class="text-uppercase fw-bold text-white mb-0">Education &amp; Credentials</h5>
-                </div>
-                <div class="grid-box p-3 d-flex flex-wrap justify-content-between align-items-center">
-                    <div>
-                        <h6 class="text-white fw-bold mb-1">Bachelor of Science in Information Technology (B.Sc. IT)</h6>
-                        <p class="text-secondary small mb-0">Specialized in Object-Oriented Software Engineering, Data Structures, Relational Database Systems &amp; Web Architectures.</p>
-                    </div>
-                    <span class="badge bg-secondary px-3 py-2 rounded-pill mt-2 mt-md-0">Graduated</span>
-                </div>
-            </div>
-
         </div>
     </div>
-</div>
+
+</body>
+</html>

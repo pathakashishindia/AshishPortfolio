@@ -28,11 +28,12 @@
             box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
         }
 
-        .profile-avatar-img {
-            object-fit: cover;
-            object-position: center 12%;
-            transform: scale(1.12);
-            transition: transform 0.3s ease;
+        .profile-img-fit {
+            width: 88%;
+            height: 92%;
+            object-fit: contain;
+            object-position: center bottom;
+            filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.6));
         }
 
         @@media print {
@@ -59,9 +60,10 @@
         <a href="/" class="inline-flex items-center gap-2 text-xs font-bold text-slate-400 hover:text-white transition">
             <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Portfolio
         </a>
-        <button onclick="window.print()" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white text-xs font-bold flex items-center gap-2 shadow-md transition">
-            <i data-lucide="printer" class="w-4 h-4"></i> Print / Save Visual PDF
-        </button>
+        <a href="~/Ashish_Resume.pdf" download="Ashish_Kumar_Pathak_Resume.pdf" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white text-xs font-bold flex items-center gap-2 shadow-md transition group">
+            <i data-lucide="download" class="w-4 h-4 text-sky-400 group-hover:translate-y-0.5 transition"></i>
+            Download Official PDF
+        </a>
     </div>
 
     <!-- MAIN INFOGRAPHIC RESUME SHEET -->
@@ -75,7 +77,7 @@
             <p class="text-xs sm:text-sm font-bold text-slate-400 tracking-wider uppercase font-mono">
                 Full-Stack .NET Developer | C#, ASP.NET Core, Angular, SQL Server, Azure
             </p>
-            <p class="text-xs text-slate-500 font-mono">Ranchi, India • 4+ Years Experience • Available for Global Remote</p>
+            <p class="text-xs text-slate-500 font-mono">Greater Noida, India • 4+ Years Experience • Available for Global Remote[cite: 1]</p>
         </div>
 
         <!-- 2. CENTRAL INFOGRAPHIC HUB -->
@@ -97,7 +99,7 @@
                         </div>
                         <h3 class="text-xs font-bold text-white">Full-Stack .NET Developer (CHS Inc.)</h3>
                         <p class="text-[11px] text-slate-400 leading-relaxed">
-                            Engineered PlanetPress JDE C# middleware cutting document processing from 30–40 mins to seconds. Shipped automated account reporting suites.
+                            Engineered PlanetPress JDE C# middleware cutting document processing from 30–40 mins to seconds[cite: 1]. Shipped automated account reporting suites[cite: 1].
                         </p>
                     </div>
 
@@ -109,7 +111,7 @@
                         </div>
                         <h3 class="text-xs font-bold text-white">Full-Stack Developer (Junior)</h3>
                         <p class="text-[11px] text-slate-400 leading-relaxed">
-                            Enhanced .NET Core live checkout workflows, payment capture, and tuned SQL execution plans resolving concurrency deadlocks.
+                            Enhanced .NET Core live checkout workflows, payment capture, and tuned SQL execution plans resolving concurrency deadlocks[cite: 1].
                         </p>
                     </div>
 
@@ -121,21 +123,21 @@
                         </div>
                         <h3 class="text-xs font-bold text-white">Database &amp; .NET Support Trainee</h3>
                         <p class="text-[11px] text-slate-400 leading-relaxed">
-                            24/7 SQL Server production operations, monitored Tidal ETL batch jobs, and implemented persistent code-level fixes.
+                            24/7 SQL Server production operations, monitored Tidal ETL batch jobs, and implemented persistent code-level fixes[cite: 1].
                         </p>
                     </div>
                 </div>
             </div>
 
-            <!-- Center Hub: Profile Frame with High-Accuracy Alignment -->
+            <!-- Center Hub: Perfectly Centered & Uncropped Portrait Frame -->
             <div class="lg:col-span-4 flex flex-col items-center justify-center space-y-6 text-center">
 
                 <!-- Circular Profile with Glass Tint Orbit -->
-                <div class="relative w-48 h-48 sm:w-56 sm:h-56 rounded-full p-2 bg-gradient-to-b from-sky-400/40 via-slate-800 to-transparent shadow-[0_0_35px_rgba(56,189,248,0.2)]">
-                    <div class="w-full h-full rounded-full overflow-hidden border-2 border-sky-400/50 bg-[#0c1220] flex items-center justify-center shadow-inner">
+                <div class="relative w-52 h-52 sm:w-60 sm:h-60 rounded-full p-2.5 bg-gradient-to-b from-sky-500/30 via-slate-800 to-transparent shadow-[0_0_35px_rgba(56,189,248,0.15)] flex items-center justify-center">
+                    <div class="w-full h-full rounded-full overflow-hidden border-2 border-sky-400/40 bg-[#090d16] flex items-end justify-center">
                         <img src="~/images/ashish.png"
                              alt="Ashish Kumar Pathak"
-                             class="w-full h-full profile-avatar-img"
+                             class="profile-img-fit"
                              onerror="if (!this.dataset.tried1) { this.dataset.tried1 = true; this.src='/images/ashish.png'; } else if (!this.dataset.tried2) { this.dataset.tried2 = true; this.src='/ashish.png'; } else { this.onerror=null; this.src='/images/profile.png'; }" />
                     </div>
                 </div>
@@ -145,7 +147,7 @@
                     "Specializing in end-to-end enterprise software engineering, distributed systems resilience, and transforming operational bottlenecks into automated seconds."
                 </div>
 
-                <!-- Hardware Vector Badge -->
+                <!-- Central Hardware Vector Badge -->
                 <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center gap-3 text-xs font-mono text-slate-300">
                     <i data-lucide="cpu" class="w-5 h-5 text-slate-400"></i>
                     <span>Full-Stack Architecture Hub</span>
@@ -165,22 +167,22 @@
                     <div class="space-y-2 text-xs text-slate-400 font-mono">
                         <div class="p-2.5 rounded-xl bg-white/[0.03] border border-slate-800 flex items-center gap-2.5">
                             <i data-lucide="map-pin" class="w-4 h-4 text-slate-400 shrink-0"></i>
-                            <span class="truncate">Ranchi, Jharkhand, India</span>
+                            <span class="truncate">Greater Noida, India[cite: 1]</span>
                         </div>
 
                         <a href="tel:+916204166367" class="p-2.5 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] border border-slate-800 flex items-center gap-2.5 transition text-slate-300 hover:text-white group">
                             <i data-lucide="phone" class="w-4 h-4 text-slate-400 group-hover:text-sky-400 transition shrink-0"></i>
-                            <span class="truncate">+91 62041 66367</span>
+                            <span class="truncate">+91 62041 66367[cite: 1]</span>
                         </a>
 
                         <a href="mailto:pathak.ashishindia@gmail.com" class="p-2.5 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] border border-slate-800 flex items-center gap-2.5 transition text-slate-300 hover:text-white group">
                             <i data-lucide="mail" class="w-4 h-4 text-slate-400 group-hover:text-sky-400 transition shrink-0"></i>
-                            <span class="truncate">pathak.ashishindia@gmail.com</span>
+                            <span class="truncate">pathak.ashishindia@gmail.com[cite: 1]</span>
                         </a>
 
-                        <a href="https://linkedin.com/in/ashish-pathak" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] border border-slate-800 flex items-center gap-2.5 transition text-slate-300 hover:text-white group">
+                        <a href="https://linkedin.com/in/ashish-pathak-6b1567219" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] border border-slate-800 flex items-center gap-2.5 transition text-slate-300 hover:text-white group">
                             <i data-lucide="linkedin" class="w-4 h-4 text-slate-400 group-hover:text-sky-400 transition shrink-0"></i>
-                            <span class="truncate">linkedin.com/in/ashish-pathak</span>
+                            <span class="truncate">linkedin.com/in/ashish-pathak[cite: 1]</span>
                         </a>
                     </div>
                 </div>
@@ -195,27 +197,27 @@
                     <div class="grid grid-cols-3 gap-2 text-center font-mono">
                         <div class="p-3 rounded-2xl bg-white/[0.03] border border-slate-800">
                             <span class="text-base font-extrabold text-white block">C#</span>
-                            <span class="text-[9px] text-slate-500 uppercase">.NET Core</span>
+                            <span class="text-[9px] text-slate-500 uppercase">.NET Core[cite: 1]</span>
                         </div>
                         <div class="p-3 rounded-2xl bg-white/[0.03] border border-slate-800">
                             <span class="text-base font-extrabold text-white block">SQL</span>
-                            <span class="text-[9px] text-slate-500 uppercase">T-SQL</span>
+                            <span class="text-[9px] text-slate-500 uppercase">T-SQL[cite: 1]</span>
                         </div>
                         <div class="p-3 rounded-2xl bg-white/[0.03] border border-slate-800">
                             <span class="text-base font-extrabold text-white block">NG</span>
-                            <span class="text-[9px] text-slate-500 uppercase">Angular</span>
+                            <span class="text-[9px] text-slate-500 uppercase">Angular[cite: 1]</span>
                         </div>
                         <div class="p-3 rounded-2xl bg-white/[0.03] border border-slate-800">
                             <span class="text-base font-extrabold text-white block">AZ</span>
-                            <span class="text-[9px] text-slate-500 uppercase">DevOps</span>
+                            <span class="text-[9px] text-slate-500 uppercase">DevOps[cite: 1]</span>
                         </div>
                         <div class="p-3 rounded-2xl bg-white/[0.03] border border-slate-800">
                             <span class="text-base font-extrabold text-white block">EF</span>
-                            <span class="text-[9px] text-slate-500 uppercase">EF Core</span>
+                            <span class="text-[9px] text-slate-500 uppercase">EF Core[cite: 1]</span>
                         </div>
                         <div class="p-3 rounded-2xl bg-white/[0.03] border border-slate-800">
                             <span class="text-base font-extrabold text-white block">AI</span>
-                            <span class="text-[9px] text-slate-500 uppercase">OpenAI</span>
+                            <span class="text-[9px] text-slate-500 uppercase">OpenAI[cite: 1]</span>
                         </div>
                     </div>
                 </div>
@@ -236,9 +238,9 @@
                     <span class="px-3 py-1 bg-white/[0.03] border border-slate-800 text-xs text-slate-300 font-mono rounded-xl">Clean Architecture</span>
                     <span class="px-3 py-1 bg-white/[0.03] border border-slate-800 text-xs text-slate-300 font-mono rounded-xl">CQRS &amp; MediatR</span>
                     <span class="px-3 py-1 bg-white/[0.03] border border-slate-800 text-xs text-slate-300 font-mono rounded-xl">Redis Distributed Caching</span>
-                    <span class="px-3 py-1 bg-white/[0.03] border border-slate-800 text-xs text-slate-300 font-mono rounded-xl">Microservices Concepts</span>
-                    <span class="px-3 py-1 bg-white/[0.03] border border-slate-800 text-xs text-slate-300 font-mono rounded-xl">Octopus Release Automation</span>
-                    <span class="px-3 py-1 bg-white/[0.03] border border-slate-800 text-xs text-slate-300 font-mono rounded-xl">Tidal Scheduler ETL</span>
+                    <span class="px-3 py-1 bg-white/[0.03] border border-slate-800 text-xs text-slate-300 font-mono rounded-xl">Microservices Concepts[cite: 1]</span>
+                    <span class="px-3 py-1 bg-white/[0.03] border border-slate-800 text-xs text-slate-300 font-mono rounded-xl">Octopus Release Automation[cite: 1]</span>
+                    <span class="px-3 py-1 bg-white/[0.03] border border-slate-800 text-xs text-slate-300 font-mono rounded-xl">Tidal Scheduler ETL[cite: 1]</span>
                 </div>
             </div>
 
@@ -249,12 +251,12 @@
                 </h3>
                 <div class="space-y-2 text-xs text-slate-400 font-mono">
                     <div class="p-2.5 rounded-xl bg-white/[0.03] border border-slate-800 flex justify-between items-center">
-                        <span>B.Sc. Information Technology (DSPMU)</span>
-                        <span class="text-slate-500">2022</span>
+                        <span>B.Sc. Information Technology (DSPMU)[cite: 1]</span>
+                        <span class="text-slate-500">2022[cite: 1]</span>
                     </div>
                     <div class="p-2.5 rounded-xl bg-white/[0.03] border border-slate-800 flex justify-between items-center">
-                        <span>Azure OpenAI &amp; Secure Azure Workloads</span>
-                        <span class="text-slate-500">Certified</span>
+                        <span>Azure OpenAI &amp; Secure Azure Workloads[cite: 1]</span>
+                        <span class="text-slate-500">Certified[cite: 1]</span>
                     </div>
                 </div>
             </div>
